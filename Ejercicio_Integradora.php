@@ -32,7 +32,6 @@ foreach($jugadores as $nombre => $puntos) {
     }
     $contarJugadores++;
 }
-
 echo "Menos de 500 puntos →$menos500 <br>";
 echo "Entre 500 y 799  →$entre500y799 <br>";
 echo "Entre 800 y 999  →$entre800y999 <br>";
@@ -40,14 +39,23 @@ echo "Más de 1000 puntos  →$mas1000 <br>";
 echo "Cantidad de jugadores: $contarJugadores <br>";
 echo "Jugadores con al menos 500 puntos: $contarAlMenos500 <br>";
 // echo "Total puntos: $totalPuntos <br>";
-echo "Puntuación media: " . ($totalPuntos / $contarJugadores) . "<br>";
+$media = $totalPuntos / $contarJugadores;
+echo "Puntuación media: " . $media . "<br>";
 $puntuacionMasAlta = end($jugadores);
 $jugadorMayorPuntuacion = key($jugadores);
 echo "Puntuación más alta: $puntuacionMasAlta <br>";
 $puntuacionMasBaja = reset($jugadores);
-echo "Puntiación más baja: $puntuacionMasBaja <br>";
-echo "Jugador con mayor puntuación $jugadorMayorPuntuacion <br> "
-
+echo "Puntuación más baja: $puntuacionMasBaja <br>";
+echo "Jugador con mayor puntuación $jugadorMayorPuntuacion <br> ";
+if ($media < 500) {
+    echo "La puntuación media es inferior a 500 <br>";
+} else if ($media >= 500 && $media < 800) {
+    echo "La puntuación media está entre 500 y 799 <br>";
+} else if ($media >= 800 && $media < 1000) {
+    echo "La puntuación media está enrte 800 y 999 <br>";
+} else {
+    echo "La puntuación media es superior a 1000 <br>";
+}
 
 ?>
 
