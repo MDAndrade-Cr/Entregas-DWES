@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Ejercicio Get y Post 1</title>
+    <title>Ejercicio Get y Post 12</title>
     <meta charset="UTF-8">
 </head>
 
